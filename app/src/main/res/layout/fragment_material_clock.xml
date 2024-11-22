@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:background="#000000"
+    android:paddingVertical="52dp"
+    android:paddingHorizontal="56dp">
+
+    <TextView
+        android:id="@+id/its"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/its"
+        android:textColor="?colorPrimaryFixedDim"
+        android:textSize="@dimen/material_clock_uniform_info_size"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextClock
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="dd"
+        android:layout_marginTop="4dp"
+        android:format24Hour="dd"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/inter_semibold"
+        android:textSize="@dimen/material_clock_uniform_info_size"
+        android:includeFontPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/its"
+        app:layout_constraintStart_toStartOf="@id/its"
+        />
+
+    <TextView
+        android:id="@+id/ordinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="22sp"
+        android:layout_marginStart="1dp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/inter_bold"
+        android:includeFontPadding="false"
+        app:layout_constraintTop_toTopOf="@id/day"
+        app:layout_constraintStart_toEndOf="@id/day"
+        />
+
+    <TextClock
+        android:id="@+id/month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/material_clock_shade_color"
+        android:textSize="@dimen/material_clock_uniform_info_size"
+        android:includeFontPadding="false"
+        android:format12Hour="MMM"
+        android:format24Hour="MMM"
+        android:fontFamily="@font/inter_semibold"
+        android:layout_marginStart="10dp"
+        app:layout_constraintTop_toTopOf="@id/day"
+        app:layout_constraintBottom_toBottomOf="@id/day"
+        app:layout_constraintStart_toEndOf="@id/ordinal"
+        />
+
+    <TextView
+        android:id="@+id/weather_stat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/day"
+        app:layout_constraintStart_toStartOf="@id/day"
+        android:textSize="@dimen/material_clock_uniform_info_size"
+        android:fontFamily="@font/inter_semibold"
+        android:includeFontPadding="false"
+        android:textColor="@color/material_clock_shade_color"
+        />
+
+    <TextView
+        android:id="@+id/weather_degree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/weather_stat"
+        app:layout_constraintStart_toEndOf="@id/weather_stat"
+        android:layout_marginStart="10dp"
+        android:textSize="@dimen/material_clock_uniform_info_size"
+        android:fontFamily="@font/inter_semibold"
+        android:includeFontPadding="false"
+        android:textColor="@color/material_clock_white"
+        />
+
+    <TextClock
+        android:id="@+id/hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format24Hour="hh"
+        android:format12Hour="hh"
+        android:textColor="@color/material_clock_white"
+        android:textSize="@dimen/material_clock_clock_size"
+        android:fontFamily="@font/inter_semibold"
+        android:includeFontPadding="false"
+        app:layout_constraintEnd_toStartOf="@id/sep"
+        app:layout_constraintTop_toTopOf="@id/minute"
+        app:layout_constraintBottom_toBottomOf="@id/minute"
+        />
+
+    <TextView
+        android:id="@+id/sep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/material_clock_clock_size"
+        android:text=":"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/inter_semibold"
+        android:textColor="@color/material_clock_shade_color"
+        app:layout_constraintEnd_toStartOf="@id/minute"
+        app:layout_constraintTop_toTopOf="@id/minute"
+        app:layout_constraintBottom_toBottomOf="@id/minute"
+        />
+
+    <TextClock
+        android:id="@+id/minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format24Hour="mm"
+        android:format12Hour="mm"
+        android:textColor="@color/material_clock_white"
+        android:textSize="@dimen/material_clock_clock_size"
+        android:fontFamily="@font/inter_semibold"
+        android:includeFontPadding="false"
+        app:layout_constraintTop_toTopOf="@id/its"
+        app:layout_constraintBottom_toBottomOf="@id/weather_stat"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

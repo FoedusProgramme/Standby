@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="material_clock_white">#FFFFFFFF</color>
+    <color name="material_clock_shade_color">#656565</color>
+
+    <color name="contrast_colorBackground">#FFFFFF</color>
+    <color name="contrast_blendOverlayColor">#40000000</color>
+    <color name="blend_clock_clock_color">#FFFFFF</color>
+</resources>

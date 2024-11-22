@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="material_clock_uniform_info_size">36sp</dimen>
+    <dimen name="material_clock_clock_size">134sp</dimen>
+    <dimen name="blend_clock_clock_size">200sp</dimen>
+</resources>
